@@ -22,11 +22,6 @@ namespace SciterBootstrap
 		protected override bool OnScriptCall(SciterElement se, string name, SciterValue[] args, out SciterValue result)
 		{
 			result = null;
-
-			switch(name)
-			{
-			}
-
 			return false;
 		}
 	}
@@ -49,10 +44,10 @@ namespace SciterBootstrap
 		#endif
 		}
 
-		public void SetupWindow(SciterWindow wnd)
+		public void Setup(SciterWindow wnd)
 		{
 			_wnd = wnd;
-			SetupCallback(wnd._hwnd);
+			SetupWindow(wnd);
 		}
 
 		public void SetupPage(string page_from_res_folder)
@@ -81,7 +76,9 @@ namespace SciterBootstrap
 				if(data!=null)
 					_api.SciterDataReady(_wnd._hwnd, sld.uri, data, (uint) data.Length);
 			}
-			return SciterXDef.LoadResult.LOAD_OK;
+
+			// call base to ensure LibConsole is loaded
+			return base.OnLoadData(sld);
 		}
 	}
 }

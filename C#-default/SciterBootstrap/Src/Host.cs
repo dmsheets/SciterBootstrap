@@ -47,14 +47,14 @@ namespace SciterBootstrap
 		public BaseHost()
 		{
 		#if !DEBUG
-			_archive.Open(SciterSharpAppResource.ArchiveResource.resources);
+			_archive.Open(SciterAppResource.ArchiveResource.resources);
 		#endif
 		}
 
-		public void SetupWindow(SciterWindow wnd)
+		public void Setup(SciterWindow wnd)
 		{
 			_wnd = wnd;
-			SetupCallback(wnd._hwnd);
+			SetupWindow(wnd);
 		}
 
 		public void SetupPage(string page_from_res_folder)

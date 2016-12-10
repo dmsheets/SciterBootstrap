@@ -30,7 +30,7 @@ namespace SciterBootstrap
 
 			// Prepares SciterHost and then load the page
 			var host = new Host();
-			host.SetupWindow(wnd);
+			host.Setup(wnd);
 			host.AttachEvh(new HostEvh());
 			host.SetupPage("index.html");
 

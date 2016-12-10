@@ -16,7 +16,7 @@ namespace SciterBootstrap
 		public Host(SciterWindow wnd)
 		{
 			var host = this;
-			host.SetupWindow(wnd);
+			host.Setup(wnd);
 			host.AttachEvh(new HostEvh());
 			host.SetupPage("index.html");
 			wnd.Show();
@@ -60,10 +60,10 @@ namespace SciterBootstrap
 		#endif
 		}
 
-		public void SetupWindow(SciterWindow wnd)
+		public void Setup(SciterWindow wnd)
 		{
 			_wnd = wnd;
-			SetupCallback(wnd._hwnd);
+			SetupWindow(wnd);
 		}
 
 		public void SetupPage(string page_from_res_folder)
@@ -99,7 +99,9 @@ namespace SciterBootstrap
 				if(data!=null)
 					_api.SciterDataReady(_wnd._hwnd, sld.uri, data, (uint) data.Length);
 			}
-			return SciterXDef.LoadResult.LOAD_OK;
+
+			// call base to ensure LibConsole is loaded
+			return base.OnLoadData(sld);
 		}
 	}
 }

@@ -27,7 +27,7 @@ namespace SciterBootstrap
 
 			// Prepares SciterHost and then load the page
 			var host = new Host();
-			host.SetupWindow(wnd);
+			host.Setup(wnd);
 			host.AttachEvh(new HostEvh());
 			host.RegisterBehaviorHandler("camera", typeof(CameraEvh));// register to handle 'camera' behavior
 			host.SetupPage("index.html");

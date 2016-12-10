@@ -368,5 +368,10 @@
         <member name="F:SciterSharp.Interop.SciterXDef.SCITER_CREATE_WINDOW_FLAGS.SW_OWNS_VM">
             <summary>It has its own script VM</summary>
         </member>
+        <member name="T:SciterSharp.WinForms.SciterControl">
+            <summary>
+            Represents a SciterWindow control.
+            </summary>
+        </member>
     </members>
 </doc>

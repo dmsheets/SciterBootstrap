@@ -10,3 +10,15 @@ D:\ProjetosSciter\Bootstrap\SciterBootstrap\SciterBootstrap\obj\Debug\SciterBoot
 D:\ProjetosSciter\Bootstrap\SciterBootstrap\SciterBootstrap\obj\Debug\SciterBootstrap.csproj.GenerateResource.Cache
 D:\ProjetosSciter\Bootstrap\SciterBootstrap\SciterBootstrap\obj\Debug\SciterBootstrap.exe
 D:\ProjetosSciter\Bootstrap\SciterBootstrap\SciterBootstrap\obj\Debug\SciterBootstrap.pdb
+D:\ProjetosSciter\Bootstrap\C#-WinForms\SciterBootstrap\bin\Debug\SciterBootstrap.exe.config
+D:\ProjetosSciter\Bootstrap\C#-WinForms\SciterBootstrap\obj\Debug\SciterBootstrap.exe
+D:\ProjetosSciter\Bootstrap\C#-WinForms\SciterBootstrap\obj\Debug\SciterBootstrap.pdb
+D:\ProjetosSciter\Bootstrap\C#-WinForms\SciterBootstrap\bin\Debug\SciterBootstrap.exe
+D:\ProjetosSciter\Bootstrap\C#-WinForms\SciterBootstrap\bin\Debug\SciterBootstrap.pdb
+D:\ProjetosSciter\Bootstrap\C#-WinForms\SciterBootstrap\bin\Debug\SciterSharpWindows.dll
+D:\ProjetosSciter\Bootstrap\C#-WinForms\SciterBootstrap\bin\Debug\SciterSharpWindows.pdb
+D:\ProjetosSciter\Bootstrap\C#-WinForms\SciterBootstrap\bin\Debug\SciterSharpWindows.xml
+D:\ProjetosSciter\Bootstrap\C#-WinForms\SciterBootstrap\obj\Debug\SciterBootstrap.csprojResolveAssemblyReference.cache
+D:\ProjetosSciter\Bootstrap\C#-WinForms\SciterBootstrap\obj\Debug\SciterBootstrap.Form1.resources
+D:\ProjetosSciter\Bootstrap\C#-WinForms\SciterBootstrap\obj\Debug\SciterBootstrap.Properties.Resources.resources
+D:\ProjetosSciter\Bootstrap\C#-WinForms\SciterBootstrap\obj\Debug\SciterBootstrap.csproj.GenerateResource.Cache
