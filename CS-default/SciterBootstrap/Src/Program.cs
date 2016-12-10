@@ -22,7 +22,7 @@ namespace SciterBootstrap
 			var wnd = new SciterWindow();
 			wnd.CreateMainWindow(1500, 800);
 			wnd.CenterTopLevelWindow();
-			wnd.Title = "Sciter Bootstrap";
+			wnd.Title = "SciterBootstrap";
 			wnd.Icon = Properties.Resources.IconMain;
 
 			// Prepares SciterHost and then load the page

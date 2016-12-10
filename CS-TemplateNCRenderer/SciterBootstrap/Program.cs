@@ -24,7 +24,7 @@ namespace SciterBootstrap
 			var wnd = GlobalWnd = new Window();
 			wnd.CreateMainWindow(1500, 800);
 			wnd.CenterTopLevelWindow();
-			wnd.Title = "Sciter Bootstrap";
+			wnd.Title = "SciterBootstrap";
 			wnd.Icon = Properties.Resources.IconMain;
 			wnd.ExtendNCArea();
 
