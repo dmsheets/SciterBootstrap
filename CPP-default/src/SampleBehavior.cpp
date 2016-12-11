@@ -29,7 +29,7 @@ public:
 		sciter::POS points[8] = { 100, 0, 150, 100, 50, 100, 100, 0 };
 		gfx.line_color(gcolor(255, 0, 0));
 		gfx.line_width(3);
-		gfx.polyline(points, 8);
+		gfx.polyline(points, 4 /*number of points*/);
 
 		gfx.state_restore();
 		return false;
