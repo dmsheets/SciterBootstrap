@@ -6,6 +6,11 @@
 		body { margin: 1px 6px 6px 6px; }
 		:expanded body { margin: 8px 10px 10px 10px; }/* :expanded flag set when window is maximized, see Window.cs */
 
+		@media os=="Windows-10"
+		{
+			body { margin-top: 0px; }
+		}
+
 		#area-glass
 		{
 			height: 33px;
@@ -51,16 +56,16 @@
 </head>
 
 <body>
+	<menu .context>
+		<li>Help</li>
+		<li>About</li>
+		<li>Forum</li>
+		<hr />
+		<li>Exit</li>
+	</menu>
+
 	<caption #area-glass>
 		<button #btn-menu>NC Menu &nbsp;&#x25BC;</button>
-
-		<menu .context>
-			<li>Help</li>
-			<li>About</li>
-			<li>Forum</li>
-			<hr />
-			<li>Exit</li>
-		</menu>
 	</caption>
 
 	<div #area-opaque>
