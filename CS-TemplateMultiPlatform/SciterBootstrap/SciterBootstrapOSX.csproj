@@ -100,7 +100,6 @@
     <Compile Include="ArchiveResource.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="sciter-osx-32.dylib" />
     <Content Include="sciter-osx-64.dylib" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.CSharp.targets" />

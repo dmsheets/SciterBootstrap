@@ -10,45 +10,27 @@ class Script
 
 	static public void Main(string[] args)
 	{
-		// Clone templates
-		if(false)
-		{
-			SpawnProcess("git", "clone -b master --single-branch https://github.com/MISoftware/SciterBootstrap-CSharp.git SciterBootstrap-CSharp-master");
-			SpawnProcess("git", "clone -b TemplateWebcam --single-branch https://github.com/MISoftware/SciterBootstrap-CSharp.git SciterBootstrap-CSharp-TemplateWebcam");
-			SpawnProcess("git", "clone -b TemplateNCRenderer --single-branch https://github.com/MISoftware/SciterBootstrap-CSharp.git SciterBootstrap-CSharp-TemplateNCRenderer");
-			SpawnProcess("git", "clone -b TemplateMultiPlatform --single-branch https://github.com/MISoftware/SciterBootstrap-CSharp.git SciterBootstrap-CSharp-TemplateMultiPlatform");
-			SpawnProcess("git", "clone -b TemplateAeroTabs --single-branch https://github.com/MISoftware/SciterBootstrap-CSharp.git SciterBootstrap-CSharp-TemplateAeroTabs");
-
-			SpawnProcess("git", "clone -b master --single-branch https://github.com/MISoftware/SciterBootstrap-D.git SciterBootstrap-D-master");
-			SpawnProcess("git", "clone -b TemplateAeroTabs --single-branch https://github.com/MISoftware/SciterBootstrap-D.git SciterBootstrap-D-TemplateAeroTabs");
-			SpawnProcess("git", "clone -b Template-AeroOrb --single-branch https://github.com/MISoftware/SciterBootstrap-D.git SciterBootstrap-D-Template-AeroOrb");
-
-			SpawnProcess("git", "clone -b master --single-branch https://github.com/MISoftware/SciterBootstrap-CPP.git SciterBootstrap-CPP-master");
-			SpawnProcess("git", "clone -b TemplateOpenCV --single-branch https://github.com/MISoftware/SciterBootstrap-CPP.git SciterBootstrap-CPP-TemplateOpenCV");
-		}
-
-		// Update C# project (Nuget, dll)
 		if(true)
 		{
-			File.Copy(@"D:\Projetos\Libs Shared\sciter-sdk-3\bin.osx\sciter-osx-32.dylib", INIT_CWD + @"SciterBootstrap-CSharp-TemplateMultiPlatform\SciterBootstrap\sciter-osx-32.dylib", true);
+			// Update C# project (Nuget, dll)
+			File.Copy(@"D:\Projetos\Libs Shared\sciter-sdk\bin.osx\sciter-osx-64.dylib", INIT_CWD + @"CS-TemplateMultiPlatform\SciterBootstrap\sciter-osx-64.dylib", true);
 
-			var dirs_csharp = Directory.EnumerateDirectories(INIT_CWD).Where(dir => dir.Contains("SciterBootstrap-CSharp-"));
+			var dirs_csharp = Directory.EnumerateDirectories(INIT_CWD).Where(dir => dir.Contains("CS-"));
 			foreach(var dir_path in dirs_csharp)
 			{
 				// Nuget update (does not work for TemplateMultiPlatform)
-				SpawnProcess("nuget", "restore", dir_path);
+				//SpawnProcess("nuget", "restore", dir_path);
 				SpawnProcess("nuget", "update SciterBootstrap.sln", dir_path);
 
-				// Copy DLLs
-				File.Copy(@"D:\Projetos\Libs Shared\sciter-sdk-3\bin\sciter32.dll", dir_path + @"\SciterBootstrap\sciter32.dll", true);
-				File.Copy(@"D:\Projetos\Libs Shared\sciter-sdk-3\bin\sciter64.dll", dir_path + @"\SciterBootstrap\sciter64.dll", true);
+				// Copy DLL 32 bit only (I was copying 64 too till Sciter 3)
+				File.Copy(@"D:\Projetos\Libs Shared\sciter-sdk\bin\32\sciter.dll", dir_path + @"\SciterBootstrap\sciter.dll", true);
 			}
 		}
 
 		// Update D projects (GIT, dll's)
 		if(true)
 		{
-			var dirs_d = Directory.EnumerateDirectories(INIT_CWD).Where(dir => dir.Contains("SciterBootstrap-D"));
+			var dirs_d = Directory.EnumerateDirectories(INIT_CWD).Where(dir => dir.Contains("D-"));
 			foreach(var dir_path in dirs_d)
 			{
 				// GIT update

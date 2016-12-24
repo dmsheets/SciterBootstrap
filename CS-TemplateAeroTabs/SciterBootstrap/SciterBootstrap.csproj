@@ -41,9 +41,8 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="SciterSharpWindows, Version=1.0.46.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SciterSharpWindows.1.0.46\lib\net45\SciterSharpWindows.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="SciterSharpWindows">
+      <HintPath>..\packages\SciterSharpWindows.2.0.1\lib\net45\SciterSharpWindows.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -96,12 +95,9 @@
     <Content Include="res\AeroTabs\sample-dialogs.png" />
     <Content Include="res\AeroTabs\scroll.png" />
     <Content Include="res\AeroTabs\search.png" />
-    <None Include="sciter32.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="sciter64.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <Content Include="sciter.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

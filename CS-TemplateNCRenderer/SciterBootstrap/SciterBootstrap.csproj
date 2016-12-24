@@ -46,9 +46,8 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="SciterSharpWindows, Version=1.0.46.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SciterSharpWindows.1.0.46\lib\net45\SciterSharpWindows.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="SciterSharpWindows">
+      <HintPath>..\packages\SciterSharpWindows.2.0.1\lib\net45\SciterSharpWindows.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -91,6 +90,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="res\load_anim.png" />
+    <Content Include="sciter.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
