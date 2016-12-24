@@ -45,7 +45,7 @@ class Script
 		// Update C++ projects (GIT, dll's)
 		if(true)
 		{
-			var dirs_cpp = Directory.EnumerateDirectories(INIT_CWD).Where(dir => dir.Contains("SciterBootstrap-CPP"));
+			var dirs_cpp = Directory.EnumerateDirectories(INIT_CWD).Where(dir => dir.Contains("CPP-"));
 			foreach(var dir_path in dirs_cpp)
 			{
 				// Copy \include
@@ -69,22 +69,19 @@ class Script
 		// All: git add/commit/push
 		if(true)
 		{
-			var sciter_ver = FileVersionInfo.GetVersionInfo(@"D:\Projetos\Libs Shared\sciter-sdk-3\bin\sciter32.dll");
+			Console.WriteLine();
+			Console.WriteLine("#####################################################");
+			Console.WriteLine("# PUSH repo: " + INIT_CWD);
+
+			Console.WriteLine("#####################################################");
+			var sciter_ver = FileVersionInfo.GetVersionInfo(@"D:\Projetos\Libs Shared\sciter-sdk\bin\32\sciter.dll");
 			string sciter_ver_str = string.Format("{0}.{1}.{2}.{3}", sciter_ver.FileMajorPart, sciter_ver.FileMinorPart, sciter_ver.FileBuildPart, sciter_ver.FilePrivatePart);
 			string commit_msg = string.Format("Update Boot -- Sciter version " + sciter_ver_str);
 
 			var dirs = Directory.EnumerateDirectories(INIT_CWD);
-			foreach(var dir_path in dirs)
-			{
-				Console.WriteLine();
-				Console.WriteLine("#####################################################");
-				Console.WriteLine("# PUSH repo: " + dir_path);
-				Console.WriteLine("#####################################################");
-
-				SpawnProcess("git", "add .", dir_path);
-				SpawnProcess("git", "commit -m\"" + commit_msg + "\"", dir_path, true);
-				SpawnProcess("git", "push origin", dir_path);
-			}
+			SpawnProcess("git", "add .", INIT_CWD);
+			SpawnProcess("git", "commit -m\"" + commit_msg + "\"", INIT_CWD, true);
+			SpawnProcess("git", "push origin", INIT_CWD);
 		}
 	}
 
