@@ -19,7 +19,6 @@ class Script
 			foreach(var dir_path in dirs_csharp)
 			{
 				// Nuget update (does not work for TemplateMultiPlatform)
-				//SpawnProcess("nuget", "restore", dir_path);
 				SpawnProcess("nuget", "update SciterBootstrap.sln", dir_path);
 
 				// Copy DLL 32 bit only (I was copying 64 too till Sciter 3)
