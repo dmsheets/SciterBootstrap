@@ -83,7 +83,7 @@ namespace SciterBootstrap
 				if(data!=null)
 					_api.SciterDataReady(_wnd._hwnd, sld.uri, data, (uint) data.Length);
 			}
-			return SciterXDef.LoadResult.LOAD_OK;
-		}
-	}
+			return base.OnLoadData(sld);
+        }
+    }
 }
