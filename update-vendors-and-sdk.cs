@@ -13,7 +13,7 @@ class Script
 		if(true)
 		{
 			// Update C# project (Nuget, dll)
-			File.Copy(@"D:\Projetos\Libs Shared\sciter-sdk\bin.osx\sciter-osx-64.dylib", INIT_CWD + @"CS-TemplateMultiPlatform\SciterBootstrap\sciter-osx-64.dylib", true);
+			File.Copy(@"D:\sciter-sdk\bin.osx\sciter-osx-64.dylib", INIT_CWD + @"CS-TemplateMultiPlatform\SciterBootstrap\sciter-osx-64.dylib", true);
 
 			var dirs_csharp = Directory.EnumerateDirectories(INIT_CWD).Where(dir => dir.Contains("CS-"));
 			foreach(var dir_path in dirs_csharp)
@@ -22,7 +22,7 @@ class Script
 				SpawnProcess("nuget", "update SciterBootstrap.sln", dir_path);
 
 				// Copy DLL 32 bit only (I was copying 64 too till Sciter 3)
-				File.Copy(@"D:\Projetos\Libs Shared\sciter-sdk\bin\32\sciter.dll", dir_path + @"\SciterBootstrap\sciter.dll", true);
+				File.Copy(@"D:\sciter-sdk\bin\32\sciter.dll", dir_path + @"\SciterBootstrap\sciter.dll", true);
 			}
 		}
 
@@ -36,8 +36,8 @@ class Script
 				SpawnProcess("cmd", "/C call copy-vendor.bat", dir_path + @"\vendor");
 
 				// Copy DLLs
-				File.Copy(@"D:\Projetos\Libs Shared\sciter-sdk-3\bin\sciter32.dll", dir_path + @"\Debug\sciter32.dll", true);
-				File.Copy(@"D:\Projetos\Libs Shared\sciter-sdk-3\bin\sciter32.dll", dir_path + @"\Release\sciter32.dll", true);
+				File.Copy(@"D:\sciter-sdk\bin\32\sciter.dll", dir_path + @"\Debug\sciter.dll", true);
+				File.Copy(@"D:\sciter-sdk\bin\32\sciter.dll", dir_path + @"\Release\sciter.dll", true);
 			}
 		}
 
@@ -48,20 +48,20 @@ class Script
 			foreach(var dir_path in dirs_cpp)
 			{
 				// Copy \include
-				var files = Directory.EnumerateFiles(@"D:\Projetos\Libs Shared\sciter-sdk-3\include", "*", SearchOption.AllDirectories);
+				var files = Directory.EnumerateFiles(@"D:\sciter-sdk\include", "*", SearchOption.AllDirectories);
 				foreach(var file in files)
 				{
-					string subfile = file.Substring(@"D:\Projetos\Libs Shared\sciter-sdk-3\include".Length);
-					File.Copy(file, dir_path + @"\vendor\sciter-sdk-3\include\" + subfile, true);
+					string subfile = file.Substring(@"D:\sciter-sdk\include".Length);
+					File.Copy(file, dir_path + @"\vendor\sciter-sdk\include\" + subfile, true);
 				}
 
 				// Copy lib
-				File.Copy(@"D:\Projetos\Libs Shared\sciter-sdk-3\lib\sciter32.lib", dir_path + @"\vendor\sciter-sdk-3\lib\sciter32.lib", true);
-				File.Copy(@"D:\Projetos\Libs Shared\sciter-sdk-3\lib\sciter64.lib", dir_path + @"\vendor\sciter-sdk-3\lib\sciter64.lib", true);
+				//File.Copy(@"D:\sciter-sdk\lib\sciter32.lib", dir_path + @"\vendor\sciter-sdk-3\lib\sciter32.lib", true);
+				//File.Copy(@"D:\sciter-sdk\lib\sciter64.lib", dir_path + @"\vendor\sciter-sdk-3\lib\sciter64.lib", true);
 
 				// Copy DLLs
-				File.Copy(@"D:\Projetos\Libs Shared\sciter-sdk-3\bin\sciter32.dll", dir_path + @"\vendor\sciter-sdk-3\bin\sciter32.dll", true);
-				File.Copy(@"D:\Projetos\Libs Shared\sciter-sdk-3\bin\sciter64.dll", dir_path + @"\vendor\sciter-sdk-3\bin\sciter64.dll", true);
+				File.Copy(@"D:\sciter-sdk\bin\32\sciter.dll", dir_path + @"\vendor\sciter-sdk\bin\sciter.dll", true);
+				//File.Copy(@"D:\Projetos\Libs Shared\sciter-sdk-3\bin\sciter64.dll", dir_path + @"\vendor\sciter-sdk-3\bin\sciter64.dll", true);
 			}
 		}
 
@@ -73,7 +73,7 @@ class Script
 			Console.WriteLine("# PUSH repo: " + INIT_CWD);
 
 			Console.WriteLine("#####################################################");
-			var sciter_ver = FileVersionInfo.GetVersionInfo(@"D:\Projetos\Libs Shared\sciter-sdk\bin\32\sciter.dll");
+			var sciter_ver = FileVersionInfo.GetVersionInfo(@"D:\sciter-sdk\bin\32\sciter.dll");
 			string sciter_ver_str = string.Format("{0}.{1}.{2}.{3}", sciter_ver.FileMajorPart, sciter_ver.FileMinorPart, sciter_ver.FileBuildPart, sciter_ver.FilePrivatePart);
 			string commit_msg = string.Format("Update Boot -- Sciter version " + sciter_ver_str);
 
