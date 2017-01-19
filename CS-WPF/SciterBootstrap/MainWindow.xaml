@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:SciterBootstrap"
         mc:Ignorable="d"
         Title="MainWindow" Height="600.172" Width="745.103">
-	<Grid>
-		<local:SciterControl HorizontalAlignment="Left" Height="336" Margin="58,34,0,0" VerticalAlignment="Top" Width="606"/>
+	<Grid Margin="0,0,35,117">
+		<local:SciterControl HorizontalAlignment="Left" Height="336" Margin="36,36,0,0" VerticalAlignment="Top" Width="606"/>
 	</Grid>
 </Window>
