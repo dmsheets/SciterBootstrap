@@ -20,17 +20,11 @@ namespace SciterBootstrap
 	/// </summary>
 	public partial class MainWindow : Window
 	{
-        private SciterControlHost _sciterControl = new SciterControlHost();
+        private SciterControl _sciterControl = new SciterControl();
 
 		public MainWindow()
 		{
 			InitializeComponent();
-		}
-
-		private void Window_Loaded(object sender, RoutedEventArgs e)
-		{
-			// Here we are adding the Sciter control as a child of the Grid
-			SciterBorderHost.Child = _sciterControl;
 		}
 	}
 }

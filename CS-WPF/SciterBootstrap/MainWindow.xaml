@@ -5,9 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SciterBootstrap"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525"
-		Loaded="Window_Loaded">
+        Title="MainWindow" Height="600.172" Width="745.103">
 	<Grid>
-		<Border x:Name="SciterBorderHost" HorizontalAlignment="Left" Height="242" Margin="84,35,0,0" VerticalAlignment="Top" Width="349"/>
+		<local:SciterControl HorizontalAlignment="Left" Height="336" Margin="58,34,0,0" VerticalAlignment="Top" Width="606"/>
 	</Grid>
 </Window>
