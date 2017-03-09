@@ -29,16 +29,16 @@
   typedef void*  HREQUEST;
 #endif
 
-enum REQUEST_RESULT
+typedef enum REQUEST_RESULT
 {
   REQUEST_PANIC = -1, // e.g. not enough memory
   REQUEST_OK = 0,
   REQUEST_BAD_PARAM = 1,  // bad parameter
   REQUEST_FAILURE = 2,    // operation failed, e.g. index out of bounds
   REQUEST_NOTSUPPORTED = 3 // the platform does not support requested feature
-};
+} REQUEST_RESULT;
 
-enum REQUEST_RQ_TYPE
+typedef enum REQUEST_RQ_TYPE
   {
     RRT_GET = 1,
     RRT_POST = 2,
@@ -46,7 +46,7 @@ enum REQUEST_RQ_TYPE
     RRT_DELETE = 4,
 
     RRT_FORCE_DWORD = 0xffffffff
-  };
+  } REQUEST_RQ_TYPE;
 
 typedef enum SciterResourceType
 {
@@ -61,14 +61,14 @@ typedef enum SciterResourceType
   RT_DATA_FORCE_DWORD = 0xffffffff
 } SciterResourceType;
 
-enum REQUEST_STATE
+typedef enum REQUEST_STATE
   {
     RS_PENDING = 0,
     RS_SUCCESS = 1, // completed successfully
     RS_FAILURE = 2, // completed with failure
 
     RS_FORCE_DWORD = 0xffffffff
-  };
+  } REQUEST_STATE;
 
 struct SciterRequestAPI
 {
@@ -172,6 +172,14 @@ struct SciterRequestAPI
   // set respone header (single item)
   REQUEST_RESULT
         SCFN(RequestSetRspHeader)( HREQUEST rq, LPCWSTR name, LPCWSTR value );
+
+  // set received data type, string, mime type
+  REQUEST_RESULT
+        SCFN(RequestSetReceivedDataType)( HREQUEST rq, LPCSTR type );
+
+  // set received data encoding, string
+  REQUEST_RESULT
+        SCFN(RequestSetReceivedDataEncoding)( HREQUEST rq, LPCSTR encoding );
 
   // get received (so far) data
   REQUEST_RESULT

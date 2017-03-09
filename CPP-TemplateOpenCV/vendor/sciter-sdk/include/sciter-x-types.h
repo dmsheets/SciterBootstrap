@@ -24,6 +24,10 @@
     #define CPP11
   #endif
   #include <string>
+#else
+
+  #include <stdbool.h>
+
 #endif
 
 enum GFX_LAYER
