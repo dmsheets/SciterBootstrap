@@ -46,7 +46,6 @@
     <Compile Include="Src\Window.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
     <None Include="packages.SciterBootstrapGTK.config" />
     <None Include="res\index.html" />
   </ItemGroup>

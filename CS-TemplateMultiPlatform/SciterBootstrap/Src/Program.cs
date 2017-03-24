@@ -17,6 +17,11 @@ namespace SciterBootstrap
 		[STAThread]
 		static void Main(string[] args)
 		{
+			if(IntPtr.Size == 4)
+			{
+				Debug.Assert(false, "sciter.dll that comes bundled in SciterBootstrap is the x64 version, make sure to change it to the x86 version if building for x86 (Windows only)");
+			}
+
 		#if WINDOWS
 			// Sciter needs this for drag'n'drop support; STAThread is required for OleInitialize succeess
 			int oleres = PInvokeWindows.OleInitialize(IntPtr.Zero);

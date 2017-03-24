@@ -1,29 +1,26 @@
-﻿<Properties StartupItem="SciterBootstrap/SciterBootstrapOSX.csproj">
+﻿<Properties StartupConfiguration="{77C8C5E7-4AB3-49FF-B8CD-4EE0B850576A}|Default">
   <MonoDevelop.Ide.ItemProperties.SciterBootstrap PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="SciterBootstrap/Src/Host.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SciterBootstrap/AppDelegate.cs">
     <Files>
-      <File FileName="SciterBootstrap/Src/Host.cs" Line="24" Column="3" />
+      <File FileName="SciterBootstrap/AppDelegate.cs" Line="24" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SciterBootstrap" expanded="True">
-            <Node name="SciterBootstrapOSX" expanded="True">
-              <Node name="Src" expanded="True" />
-              <Node name="packages.config" selected="True" />
+            <Node name="SciterBootstrap" expanded="True">
+              <Node name="References" expanded="True" />
+              <Node name="Resources" selected="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x64" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <DisabledProjects>
-    <String>SciterBootstrap/SciterBootstrapGTK.csproj</String>
-    <String>SciterBootstrap/SciterBootstrapWindows.csproj</String>
-  </DisabledProjects>
+  <MultiItemStartupConfigurations />
 </Properties>
