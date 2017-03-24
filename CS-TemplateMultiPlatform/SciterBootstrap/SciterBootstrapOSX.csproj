@@ -49,6 +49,9 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.Mac" />
+    <Reference Include="SciterSharpOSX">
+      <HintPath>..\packages\SciterSharpOSX.2.0.14\lib\Xamarin.Mac20\SciterSharpOSX.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
@@ -71,8 +74,9 @@
   <ItemGroup>
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
-    <None Include="packages.SciterBootstrapOSX.config" />
     <Content Include="sciter-osx-64.dylib" />
+    <None Include="packages.SciterBootstrapOSX.config" />
+    <None Include="res\index.html" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArchiveResource.cs" />
