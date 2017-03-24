@@ -44,6 +44,14 @@
     <LinkMode>SdkOnly</LinkMode>
     <PlatformTarget>x64</PlatformTarget>
     <DefineConstants>__UNIFIED__;OSX</DefineConstants>
+    <CustomCommands>
+      <CustomCommands>
+        <Command>
+          <type>BeforeBuild</type>
+          <command>sh scripts/packOSX.sh</command>
+        </Command>
+      </CustomCommands>
+    </CustomCommands>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />

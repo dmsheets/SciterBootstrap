@@ -1,4 +1,6 @@
 #!/bin/sh
 
-chmod +x scripts/packfolder
-scripts/packfolder res ArchiveResource.cs -csharp
+# IN OSX, COMPRESS FILES IN /res FOLDER TO ArchiveResource.cs C# FILE
+cd "$(dirname "$0")"
+chmod +x packfolder
+./packfolder ../res ../ArchiveResource.cs -csharp
