@@ -31,11 +31,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="SciterSharpGTK, Version=2.0.7.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SciterSharpGTK.2.0.7\lib\net452\SciterSharpGTK.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
+    <Reference Include="SciterSharpGTK">
+      <HintPath>..\packages\SciterSharpGTK.2.0.14\lib\net45\SciterSharpGTK.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -46,8 +45,8 @@
     <Compile Include="Src\Window.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.SciterBootstrapGTK.config" />
     <None Include="res\index.html" />
+    <None Include="packages.SciterBootstrapGTK.config" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

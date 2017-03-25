@@ -1,9 +1,9 @@
 ﻿<Properties StartupConfiguration="{77C8C5E7-4AB3-49FF-B8CD-4EE0B850576A}|Default">
   <MonoDevelop.Ide.ItemProperties.SciterBootstrapOSX PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.ItemProperties.SciterBootstrap PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="SciterBootstrap/res/index.html">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SciterBootstrap/Src/ProgramOSX.cs">
     <Files>
-      <File FileName="SciterBootstrap/res/index.html" Line="14" Column="19" />
+      <File FileName="SciterBootstrap/Src/ProgramOSX.cs" Line="47" Column="17" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|x64" />

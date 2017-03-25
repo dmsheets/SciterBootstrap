@@ -60,10 +60,6 @@
     <ApplicationIcon>Resources\IconMain.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="SciterSharpWindows, Version=2.0.7.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SciterSharpWindows.2.0.7\lib\net45\SciterSharpWindows.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -73,6 +69,9 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="SciterSharpWindows">
+      <HintPath>..\packages\SciterSharpWindows.2.0.14\lib\net45\SciterSharpWindows.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArchiveResource.cs" />
@@ -94,8 +93,8 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.SciterBootstrapWindows.config" />
     <None Include="Resources\IconMain.ico" />
+    <None Include="packages.SciterBootstrapWindows.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="res\index.html" />
