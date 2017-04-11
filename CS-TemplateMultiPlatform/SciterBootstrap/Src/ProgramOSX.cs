@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using AppKit;
 using Foundation;
 using SciterSharp;
@@ -42,20 +43,31 @@ namespace SciterBootstrap
 			AppHost = new Host(AppWindow);
 
 			// Set our custom menu with Cocoa
-			var menu1 = new NSMenu();
-			menu1.AddItem(new NSMenuItem("Hi there"));
-			menu1.AddItem(NSMenuItem.SeparatorItem);
-			menu1.AddItem(new NSMenuItem("Exit", (sender, e) => NSApplication.SharedApplication.Terminate(menu1)));
+			if(true)
+			{
+				// From XIB/NIB file (editable with Interface Builder)
+				NSArray arr;
+				bool res = NSBundle.MainBundle.LoadNibNamed("MainMenu", NSApplication.SharedApplication, out arr);
+				Debug.Assert(res);
+			}
+			else
+			{
+				// Or we can create it programatically
+				var menu1 = new NSMenu();
+				menu1.AddItem(new NSMenuItem("Hi there"));
+				menu1.AddItem(NSMenuItem.SeparatorItem);
+				menu1.AddItem(new NSMenuItem("Exit", (sender, e) => NSApplication.SharedApplication.Terminate(menu1)));
 
-			var menu2 = new NSMenu("Second menu");
-			menu2.AddItem(new NSMenuItem("What"));
-			menu2.AddItem(new NSMenuItem("Hey"));
+				var menu2 = new NSMenu("Second menu");
+				menu2.AddItem(new NSMenuItem("What"));
+				menu2.AddItem(new NSMenuItem("Hey"));
 
-			var menubar = new NSMenu();
-			menubar.AddItem(new NSMenuItem { Submenu = menu1 });
-			menubar.AddItem(new NSMenuItem { Submenu = menu2 });
+				var menubar = new NSMenu();
+				menubar.AddItem(new NSMenuItem { Submenu = menu1 });
+				menubar.AddItem(new NSMenuItem { Submenu = menu2 });
 
-			NSApplication.SharedApplication.MainMenu = menubar;
+				NSApplication.SharedApplication.MainMenu = menubar;
+			}
 		}
 
 		public override bool ApplicationShouldTerminateAfterLastWindowClosed(NSApplication sender)
