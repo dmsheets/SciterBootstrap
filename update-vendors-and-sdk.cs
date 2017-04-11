@@ -21,8 +21,8 @@ class Script
 				// Nuget update (does not work for TemplateMultiPlatform)
 				SpawnProcess("nuget", "update SciterBootstrap.sln", dir_path);
 
-				// Copy DLL 32 bit only (I was copying 64 too till Sciter 3)
-				File.Copy(@"D:\sciter-sdk\bin\32\sciter.dll", dir_path + @"\SciterBootstrap\sciter.dll", true);
+				// Copy DLL 64 bit only (I was copying 32 too till Sciter 3)
+				File.Copy(@"D:\sciter-sdk\bin\64\sciter.dll", dir_path + @"\SciterBootstrap\sciter.dll", true);
 			}
 		}
 
