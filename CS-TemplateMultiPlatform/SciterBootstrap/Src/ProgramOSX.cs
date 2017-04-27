@@ -45,7 +45,7 @@ namespace SciterBootstrap
 			// Set our custom menu with Cocoa
 			if(true)
 			{
-				// From XIB/NIB file (editable with Interface Builder)
+				// From XIB/NIB file (editable in Xcode Interface Builder)
 				NSArray arr;
 				bool res = NSBundle.MainBundle.LoadNibNamed("MainMenu", NSApplication.SharedApplication, out arr);
 				Debug.Assert(res);

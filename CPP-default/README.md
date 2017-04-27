@@ -1,1 +1,0 @@
-#Sciter Bootstrap
