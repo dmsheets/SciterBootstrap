@@ -174,9 +174,9 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\App.h" />
+    <ClInclude Include="src\App.hpp" />
     <ClInclude Include="src\BaseHost.hpp" />
-    <ClInclude Include="src\Consts.h" />
+    <ClInclude Include="src\Consts.hpp" />
     <ClInclude Include="src\Host.hpp" />
     <ClInclude Include="src\Resource.h" />
     <ClInclude Include="src\SciterSharpCPP\SciterArchive.hpp" />
@@ -189,6 +189,9 @@
     <ClInclude Include="src\Window.hpp" />
   </ItemGroup>
   <ItemGroup>
+	<None Include="..\sciter.dll">
+	  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	</None>
     <None Include="res\index.html" />
     <None Include="src\App.mm" />
     <None Include="src\ProgramOSX.mm" />

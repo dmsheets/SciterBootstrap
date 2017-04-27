@@ -60,9 +60,6 @@
     <ClInclude Include="src\BaseHost.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Consts.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\SciterSharpCPP\SciterArchive.hpp">
       <Filter>SciterSharpCPP</Filter>
     </ClInclude>
@@ -78,9 +75,6 @@
     <ClInclude Include="src\SciterSharpCPP\SciterWindow.hpp">
       <Filter>SciterSharpCPP</Filter>
     </ClInclude>
-    <ClInclude Include="src\App.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\Resource.h">
       <Filter>Header Files\Stuff</Filter>
     </ClInclude>
@@ -89,6 +83,12 @@
     </ClInclude>
     <ClInclude Include="src\targetver.h">
       <Filter>Header Files\Stuff</Filter>
+    </ClInclude>
+    <ClInclude Include="src\App.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Consts.hpp">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -104,6 +104,7 @@
     <None Include="res\index.html">
       <Filter>res</Filter>
     </None>
+    <None Include="..\sciter.dll" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="src\SciterSharpCPP\README.txt">

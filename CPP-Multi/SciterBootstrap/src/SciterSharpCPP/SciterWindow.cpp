@@ -3,9 +3,9 @@
 #include "..\stdafx.h"
 #include "SciterWindow.hpp"
 
-void SciterWindow::SetTitle(LPCWSTR title)
+void SciterWindow::SetTitle(LPCSTR title)
 {
-	SetWindowText(_hwnd, title);
+	SetWindowTextA(_hwnd, title);
 }
 
 void SciterWindow::Show(bool show)
