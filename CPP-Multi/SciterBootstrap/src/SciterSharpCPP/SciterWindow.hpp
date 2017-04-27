@@ -40,7 +40,7 @@ public:
 		return ::SciterLoadFile(_hwnd, filename);
 	}
 	
-	void SetTitle(LPCWSTR title);
+	void SetTitle(LPCSTR title);
 	void Show(bool show = true);
 	void CenterTopLevelWindow();
 };

@@ -1,11 +1,9 @@
 #pragma once
 
-#include "App.h"
+#include "App.hpp"
 #include "BaseHost.hpp"
-#include "Consts.h"
+#include "Consts.hpp"
 #include "sciter-x.h"
-#include "aux-slice.h"
-#include "aux-cvt.h"
 #include <string>
 
 

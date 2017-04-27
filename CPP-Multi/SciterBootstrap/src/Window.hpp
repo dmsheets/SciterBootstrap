@@ -10,6 +10,6 @@ public:
 	Window()
 	{
 		CreateMainWindow(800, 600);
-		SetTitle(WSTR("SciterBootstrap"));
+		SetTitle("SciterBootstrap");
 	}
 };

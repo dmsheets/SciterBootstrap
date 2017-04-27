@@ -1,4 +1,4 @@
-#import "App.h"
+#import "App.hpp"
 
 #include "sciter-x.h"
 

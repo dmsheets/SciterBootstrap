@@ -2,6 +2,11 @@
 
 #include "SciterWindow.hpp"
 
+void SciterWindow::SetTitle(LPCSTR title)
+{
+	NSView* nsview = (__bridge NSView*) _hwnd;
+	[[nsview window] setTitle:[NSString stringWithUTF8String:title]];
+}
 
 void SciterWindow::CenterTopLevelWindow()
 {
