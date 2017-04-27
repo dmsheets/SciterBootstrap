@@ -2,6 +2,11 @@
 #include "App.hpp"
 #include <assert.h>
 
+#if _M_IX86
+	#error For compiling for x86/32bits in Visual Studio, make sure to replace sciter.dll with the 32-bits version from Sciter SDK
+#endif
+
+
 
 void BoilerplateInit()
 {
