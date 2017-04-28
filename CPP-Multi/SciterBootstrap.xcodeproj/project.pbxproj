@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6286A96B1EB38F3000EB5AE5 /* SampleBehavior.cp in Sources */ = {isa = PBXBuildFile; fileRef = 6286A96A1EB38F3000EB5AE5 /* SampleBehavior.cp */; };
 		62D4046C1EB0165500E4667A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62D4046B1EB0165500E4667A /* Assets.xcassets */; };
 		62D404771EB0186800E4667A /* sciter-osx-64.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 62D404761EB0186800E4667A /* sciter-osx-64.dylib */; };
 		62D404791EB0189000E4667A /* sciter-osx-64.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 62D404761EB0186800E4667A /* sciter-osx-64.dylib */; };
@@ -35,6 +36,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6286A96A1EB38F3000EB5AE5 /* SampleBehavior.cp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SampleBehavior.cp; sourceTree = "<group>"; };
 		62D4045F1EB0165500E4667A /* SciterBootstrap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SciterBootstrap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62D4046B1EB0165500E4667A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		62D404701EB0165500E4667A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				62EB0F4B1EB02D7500D62E47 /* Consts.hpp */,
 				62EB0F4C1EB02D7500D62E47 /* Host.hpp */,
 				62EB0F4D1EB02D7500D62E47 /* ProgramOSX.mm */,
+				6286A96A1EB38F3000EB5AE5 /* SampleBehavior.cp */,
 				62EB0F571EB02D7500D62E47 /* Window.hpp */,
 			);
 			path = src;
@@ -303,6 +306,7 @@
 				62F1E46E1EB195D90055A266 /* SciterWindow.mm in Sources */,
 				62F1E45C1EB038E40055A266 /* App.mm in Sources */,
 				62EB0F591EB02D7500D62E47 /* ProgramOSX.mm in Sources */,
+				6286A96B1EB38F3000EB5AE5 /* SampleBehavior.cp in Sources */,
 				62F1E4701EB195F90055A266 /* App.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
