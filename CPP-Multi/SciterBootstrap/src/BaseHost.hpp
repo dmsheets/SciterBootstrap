@@ -1,6 +1,5 @@
 #pragma once
 
-#include "App.hpp"
 #include "SciterHost.hpp"
 #include "SciterArchive.hpp"
 

@@ -20,7 +20,6 @@ void SciterWindow::Show(bool show)
 	if(show)
 	{
 		[[nsview window] makeMainWindow];
-		//[[nsview window] makeKeyWindow];
 		[[nsview window] makeKeyAndOrderFront:nil];
 	} else {
 		[[nsview window] orderOut:[nsview window]];
