@@ -13,11 +13,6 @@
 		var revision_major = Sciter.REVISION >> 16;
 		var revision_minor = Sciter.REVISION & 0xFFFF;
 		$(h2).text = "Sciter version: " + String.printf("%d.%d.%d.%d", version_major, version_minor, revision_major, revision_minor);
-		
-		$(a).on("click", function(evt) {
-			Sciter.launch(this.@#href);
-			return true;
-		});
 	</script>
 </head>
 

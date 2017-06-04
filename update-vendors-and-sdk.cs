@@ -52,7 +52,7 @@ class Script
 				foreach(var file in files)
 				{
 					string subfile = file.Substring(@"D:\sciter-sdk\include".Length);
-					File.Copy(file, dir_path + @"\vendor\sciter-sdk\include\" + subfile, true);
+					File.Copy(file, dir_path + @"\SciterBootstrap\vendor\sciter-sdk\include\" + subfile, true);
 				}
 
 				// Copy lib
@@ -60,7 +60,7 @@ class Script
 				//File.Copy(@"D:\sciter-sdk\lib\sciter64.lib", dir_path + @"\vendor\sciter-sdk-3\lib\sciter64.lib", true);
 
 				// Copy DLLs
-				File.Copy(@"D:\sciter-sdk\bin\32\sciter.dll", dir_path + @"\vendor\sciter-sdk\bin\sciter.dll", true);
+				File.Copy(@"D:\sciter-sdk\bin\32\sciter.dll", dir_path + @"\sciter.dll", true);
 				//File.Copy(@"D:\Projetos\Libs Shared\sciter-sdk-3\bin\sciter64.dll", dir_path + @"\vendor\sciter-sdk-3\bin\sciter64.dll", true);
 			}
 		}
