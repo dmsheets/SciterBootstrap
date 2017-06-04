@@ -11,6 +11,7 @@
 		62D4046C1EB0165500E4667A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62D4046B1EB0165500E4667A /* Assets.xcassets */; };
 		62D404771EB0186800E4667A /* sciter-osx-64.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 62D404761EB0186800E4667A /* sciter-osx-64.dylib */; };
 		62D404791EB0189000E4667A /* sciter-osx-64.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 62D404761EB0186800E4667A /* sciter-osx-64.dylib */; };
+		62D9B9C01EBCB7BD00D5C75B /* Host.mm in Sources */ = {isa = PBXBuildFile; fileRef = 62D9B9BF1EBCB7BD00D5C75B /* Host.mm */; };
 		62EB0F461EB02CCF00D62E47 /* res in Resources */ = {isa = PBXBuildFile; fileRef = 62EB0F451EB02CCF00D62E47 /* res */; };
 		62EB0F591EB02D7500D62E47 /* ProgramOSX.mm in Sources */ = {isa = PBXBuildFile; fileRef = 62EB0F4D1EB02D7500D62E47 /* ProgramOSX.mm */; };
 		62EB0F931EB02DA100D62E47 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62EB0F921EB02DA100D62E47 /* MainMenu.xib */; };
@@ -41,6 +42,7 @@
 		62D4046B1EB0165500E4667A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		62D404701EB0165500E4667A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62D404761EB0186800E4667A /* sciter-osx-64.dylib */ = {isa = PBXFileReference; explicitFileType = compiled; path = "sciter-osx-64.dylib"; sourceTree = "<group>"; };
+		62D9B9BF1EBCB7BD00D5C75B /* Host.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Host.mm; sourceTree = "<group>"; };
 		62EB0F451EB02CCF00D62E47 /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
 		62EB0F481EB02D7500D62E47 /* App.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = App.hpp; sourceTree = "<group>"; };
 		62EB0F491EB02D7500D62E47 /* App.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = App.mm; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				62EB0F4A1EB02D7500D62E47 /* BaseHost.hpp */,
 				62EB0F4B1EB02D7500D62E47 /* Consts.hpp */,
 				62EB0F4C1EB02D7500D62E47 /* Host.hpp */,
+				62D9B9BF1EBCB7BD00D5C75B /* Host.mm */,
 				62EB0F4D1EB02D7500D62E47 /* ProgramOSX.mm */,
 				6286A96A1EB38F3000EB5AE5 /* SampleBehavior.cp */,
 				62EB0F571EB02D7500D62E47 /* Window.hpp */,
@@ -302,6 +305,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62D9B9C01EBCB7BD00D5C75B /* Host.mm in Sources */,
 				62F1E46D1EB195D90055A266 /* SciterWindow.cpp in Sources */,
 				62F1E46E1EB195D90055A266 /* SciterWindow.mm in Sources */,
 				62F1E45C1EB038E40055A266 /* App.mm in Sources */,

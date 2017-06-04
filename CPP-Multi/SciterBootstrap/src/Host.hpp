@@ -1,6 +1,5 @@
 #pragma once
 
-#include "App.hpp"
 #include "BaseHost.hpp"
 #include "Consts.hpp"
 #include "sciter-x.h"
