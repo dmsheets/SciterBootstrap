@@ -6,7 +6,7 @@
 class SciterWindow
 {
 private:
-	const UINT DefaultCreateFlags =
+	static constexpr UINT DefaultCreateFlags =
 		SW_MAIN |
 		SW_TITLEBAR |
 		SW_RESIZEABLE |
@@ -18,13 +18,13 @@ private:
 public:
 	HWINDOW GetHWND() { return _hwnd; }
 	
-	void CreateMainWindow(int width, int height)
+	void CreateMainWindow(int width, int height, UINT flags = DefaultCreateFlags)
 	{
 		RECT frame = { 0 };
 		frame.right = width;
 		frame.bottom = height;
 		
-		_hwnd = ::SciterCreateWindow(DefaultCreateFlags, &frame, nullptr, nullptr, nullptr);
+		_hwnd = ::SciterCreateWindow(flags, &frame, nullptr, nullptr, nullptr);
 	}
 	
 	bool LoadPage(LPCWSTR filename)
