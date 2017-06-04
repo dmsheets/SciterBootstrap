@@ -175,6 +175,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="SciterDebugOutputHandler.hpp" />
     <ClInclude Include="src\App.hpp" />
     <ClInclude Include="src\BaseHost.hpp" />
     <ClInclude Include="src\Consts.hpp" />

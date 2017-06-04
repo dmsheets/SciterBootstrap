@@ -93,6 +93,9 @@
     <ClInclude Include="src\Consts.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SciterDebugOutputHandler.hpp">
+      <Filter>SciterSharpCPP</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="src\ProgramOSX.mm">
