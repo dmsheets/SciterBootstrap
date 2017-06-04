@@ -55,13 +55,13 @@ class Script
 					File.Copy(file, dir_path + @"\SciterBootstrap\vendor\sciter-sdk\include\" + subfile, true);
 				}
 
+				// Copy DLLs
+				File.Copy(@"D:\sciter-sdk\bin\64\sciter.dll", dir_path + @"\sciter.dll", true);
+				//File.Copy(@"D:\Projetos\Libs Shared\sciter-sdk-3\bin\sciter64.dll", dir_path + @"\vendor\sciter-sdk-3\bin\sciter64.dll", true);
+
 				// Copy lib
 				//File.Copy(@"D:\sciter-sdk\lib\sciter32.lib", dir_path + @"\vendor\sciter-sdk-3\lib\sciter32.lib", true);
 				//File.Copy(@"D:\sciter-sdk\lib\sciter64.lib", dir_path + @"\vendor\sciter-sdk-3\lib\sciter64.lib", true);
-
-				// Copy DLLs
-				File.Copy(@"D:\sciter-sdk\bin\32\sciter.dll", dir_path + @"\sciter.dll", true);
-				//File.Copy(@"D:\Projetos\Libs Shared\sciter-sdk-3\bin\sciter64.dll", dir_path + @"\vendor\sciter-sdk-3\bin\sciter64.dll", true);
 			}
 		}
 
