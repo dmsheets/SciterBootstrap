@@ -6,7 +6,8 @@
 
 int main(int argc, const char* argv[])
 {
-	SciterSetOption(nullptr, SCITER_SET_GFX_LAYER, GFX_LAYER_CG);
+	// Default GFX in Sciter v4 is Skia, switch to CoreGraphics (seems more stable)
+	//SciterSetOption(nullptr, SCITER_SET_GFX_LAYER, GFX_LAYER_CG);
 	
 	App::ParseArgs(argc, argv);
 	
