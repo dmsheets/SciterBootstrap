@@ -1,6 +1,7 @@
-.DS_Store
 
-#IDE Garbage
+
+# Garbage
+.DS_Store
 **/bin/Debug
 **/bin/Release
 obj/

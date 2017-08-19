@@ -1,4 +1,5 @@
-﻿using System;
+﻿#if OSX
+using System;
 using System.Diagnostics;
 using AppKit;
 using Foundation;
@@ -90,3 +91,4 @@ namespace SciterBootstrap
         }
     }
 }
+#endif
