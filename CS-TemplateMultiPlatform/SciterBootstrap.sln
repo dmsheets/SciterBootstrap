@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26228.9
+VisualStudioVersion = 15.0.26730.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SciterBootstrapWindows", "SciterBootstrap\SciterBootstrapWindows.csproj", "{FABEBB54-7E6E-4DCD-A4A3-D713EA38731B}"
 EndProject
@@ -10,6 +10,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SciterBootstrapGTK", "Scite
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{83EE6783-C6AA-421C-B18B-460D2AA0CA7F}"
 	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
 		OmniCode-Settings.json = OmniCode-Settings.json
 		SciterBootstrap\scripts\packOSX.sh = SciterBootstrap\scripts\packOSX.sh
 	EndProjectSection
@@ -45,5 +46,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A5DC555E-A237-4F94-B075-364E380ECA38}
 	EndGlobalSection
 EndGlobal
