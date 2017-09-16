@@ -4,7 +4,7 @@ OctodeskDesk app made with this lib: https://github.com/midiway/OctoDeskdex
 
 For quick starting, download a [Sciter Bootstrap](http://misoftware.rs/Bootstrap/Download) package for the D language, which comes with this library already configured.
 
-**Status**: after I started writing the [C# bindings](https://github.com/midiway/SciterSharp) for Sciter, I realized how a 100% object-orient wrapper around Sciter API is the best way to go for creating a user friendly abstraction. When I started this D-port, in my mind I would be making the equivalent of the C++ classes found in Sciter SDK which is OO btw but the naming of things is very confusing. So the next step for this D-port is to convert it to equivalent classes and names found in the C# port, however I am prioritizing the C# version which is getting Mono cross-platform support. This port will eventually get more attention for improvements and for having GTK support, but right now I am focusing the C# version.
+**Status**: after I started writing the [C# bindings](https://github.com/MISoftware/SciterSharp) for Sciter, I realized how a 100% object-orient wrapper around Sciter API is the best way to go for creating a user friendly abstraction. When I started this D-port, in my mind I would be making the equivalent of the C++ classes found in Sciter SDK which is OO btw but the naming of things is very confusing. So the next step for this D-port is to convert it to equivalent classes and names found in the C# port, however I am prioritizing the C# version which is getting Mono cross-platform support. This port will eventually get more attention for improvements and for having GTK support, but right now I am focusing the C# version.
 
 ## About
 
@@ -25,74 +25,74 @@ License: MIT License
 This is a table of the available D classes/structs and their mapping over the types of the official SDK C++ headers:
 
 <table>
-	<tr>
-		<th>D type</th>
-		<th>C++ equivalent type</th>
-	</tr>
+<tr>
+<th>D type</th>
+<th>C++ equivalent type</th>
+</tr>
 
-	<tr>
-	    <td>
-            <i>module sciter.sciter_dom;</i><br>
-            <b>struct node</b><br>
-            <b>struct element</b>
-	    </td>
+<tr>
+<td>
+<i>module sciter.sciter_dom;</i><br>
+<b>struct node</b><br>
+<b>struct element</b>
+</td>
 
-	    <td>
-            <i>#include "sciter-x-dom.hpp"</i><br>
-            <b>class sciter::dom::node</b><br>
-            <b>class sciter::dom::element</b>
-	    </td>
-	</tr>
+<td>
+<i>#include "sciter-x-dom.hpp"</i><br>
+<b>class sciter::dom::node</b><br>
+<b>class sciter::dom::element</b>
+</td>
+</tr>
 
-    <tr>
-	    <td>
-            <i>module sciter.sciter_value;</i><br>
-            <b>struct json_value</b>
-	    </td>
+<tr>
+<td>
+<i>module sciter.sciter_value;</i><br>
+<b>struct json_value</b>
+</td>
 
-	    <td>
-            <i>#include "value.hpp"</i><br>
-            <b>sciter::value or VALUE</b>
-	    </td>
-	</tr>
+<td>
+<i>#include "value.hpp"</i><br>
+<b>sciter::value or VALUE</b>
+</td>
+</tr>
 
-    <tr>
-	    <td>
-            <i>module sciter.dbg;</i><br>
-            <b>abstract class debug_output</b><br>
-	    </td>
+<tr>
+<td>
+<i>module sciter.dbg;</i><br>
+<b>abstract class debug_output</b><br>
+</td>
 
-	    <td>
-            <i>#include "sciter-x-debug.h"</i><br>
-            <b>class sciter::debug_output</b><br>
-	    </td>
-	</tr>
+<td>
+<i>#include "sciter-x-debug.h"</i><br>
+<b>class sciter::debug_output</b><br>
+</td>
+</tr>
 
-    <tr>
-	    <td>
-            <i>module sciter.host;</i><br>
-            <b>class SciterArchive</b><br>
-            <b>abstract class SciterWindowHost</b>
-	    </td>
+<tr>
+<td>
+<i>module sciter.host;</i><br>
+<b>class SciterArchive</b><br>
+<b>abstract class SciterWindowHost</b>
+</td>
 
-	    <td>
-            <i>#include "sciter-x-host-callback.h"</i><br>
-            <b>class sciter::archive</b><br>
-            <b>class sciter::host&lt;BASE&gt;</b>
-	    </td>
-	</tr>
+<td>
+<i>#include "sciter-x-host-callback.h"</i><br>
+<b>class sciter::archive</b><br>
+<b>class sciter::host&lt;BASE&gt;</b>
+</td>
+</tr>
 
-    <tr>
-	    <td>
-            <i>module sciter.behavior;</i><br>
-            <b>abstract class EventHandler</b>
-	    </td>
+<tr>
+<td>
+<i>module sciter.behavior;</i><br>
+<b>abstract class EventHandler</b>
+</td>
 
-	    <td>
-            <i>#include "sciter-x-behavior.h"</i><br>
-            <b>class sciter::event_handler</b>
-	    </td>
-	</tr>
+<td>
+<i>#include "sciter-x-behavior.h"</i><br>
+<b>class sciter::event_handler</b>
+</td>
+</tr>
 </table>
 
 ## Package content
