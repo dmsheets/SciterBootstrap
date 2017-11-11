@@ -58,7 +58,7 @@
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.Mac" />
     <Reference Include="SciterSharpOSX">
-      <HintPath>..\packages\SciterSharpOSX.2.0.19\lib\Xamarin.Mac20\SciterSharpOSX.dll</HintPath>
+      <HintPath>..\packages\SciterSharpOSX.2.0.27\lib\Xamarin.Mac20\SciterSharpOSX.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -82,9 +82,8 @@
   <ItemGroup>
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
-    <Content Include="sciter-osx-64.dylib" />
     <None Include="res\index.html" />
-    <None Include="packages.SciterBootstrapOSX.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArchiveResource.cs" />
@@ -95,6 +94,12 @@
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="MainMenu.xib" />
+  </ItemGroup>
+  <ItemGroup>
+    <NativeReference Include="libsciter-osx-64.dylib">
+      <Kind>Dynamic</Kind>
+      <SmartLink>False</SmartLink>
+    </NativeReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.CSharp.targets" />
 </Project>
