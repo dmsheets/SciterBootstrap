@@ -33,7 +33,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="SciterSharpGTK">
-      <HintPath>..\packages\SciterSharpGTK.2.0.14\lib\net45\SciterSharpGTK.dll</HintPath>
+      <HintPath>..\packages\SciterSharpGTK.2.0.26\lib\net45\SciterSharpGTK.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
