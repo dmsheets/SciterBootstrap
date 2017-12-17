@@ -38,14 +38,7 @@ namespace SciterBootstrap
 				In Linux, if you are getting a System.TypeInitializationException below, it is because you don't have 'libsciter-gtk-64.so' in your LD_LIBRARY_PATH.
 				Run 'sudo bash install-libsciter.sh' contained in this package to install it in your system.
 			*/
-			// Create the window
-			AppWindow = new Window();
-
-			// Prepares SciterHost and then load the page
-			AppHost = new Host(AppWindow);
-
-			// Run message loop
-			PInvokeUtils.RunMsgLoop();
+			App.Run();
 		}
 	}
 }

@@ -36,12 +36,7 @@ namespace SciterBootstrap
 		public override void DidFinishLaunching(NSNotification notification)
 		{
 			Mono.Setup();
-
-			// Create the window
-			AppWindow = new Window();
-
-			// Prepares SciterHost and then load the page
-			AppHost = new Host(AppWindow);
+			App.Run();
 
 			// Set our custom menu with Cocoa
 			if(true)
@@ -81,14 +76,5 @@ namespace SciterBootstrap
 			// Insert code here to tear down your application
 		}
 	}
-
-	// In OSX/Xamarin Studio, make Sciter messages be shown at 'Application Output' panel
-    class SciterMessages : SciterDebugOutputHandler
-    {
-        protected override void OnOutput(SciterSharp.Interop.SciterXDef.OUTPUT_SUBSYTEM subsystem, SciterSharp.Interop.SciterXDef.OUTPUT_SEVERITY severity, string text)
-        {
-            Console.WriteLine(text);
-        }
-    }
 }
 #endif
