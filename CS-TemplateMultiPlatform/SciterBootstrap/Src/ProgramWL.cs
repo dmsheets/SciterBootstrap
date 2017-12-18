@@ -12,9 +12,6 @@ namespace SciterBootstrap
 {
 	class Program
 	{
-		public static Window AppWindow { get; private set; }// must keep a reference to survive GC
-		public static Host AppHost { get; private set; }
-
 		[STAThread]
 		static void Main(string[] args)
 		{
