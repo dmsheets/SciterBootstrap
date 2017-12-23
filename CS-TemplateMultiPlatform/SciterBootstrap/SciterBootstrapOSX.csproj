@@ -77,19 +77,20 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
-    <Folder Include="res\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
+    <None Include="packages.SciterBootstrapOSX.config" />
     <None Include="res\index.html" />
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArchiveResource.cs" />
+    <Compile Include="Src\App.cs" />
     <Compile Include="Src\Host.cs" />
     <Compile Include="Src\Mono.cs" />
     <Compile Include="Src\ProgramOSX.cs" />
+    <Compile Include="Src\ProgramWL.cs" />
     <Compile Include="Src\Window.cs" />
   </ItemGroup>
   <ItemGroup>
