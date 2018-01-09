@@ -44,6 +44,8 @@ class Script
 		// Update C++ projects (GIT, dll's)
 		if(true)
 		{
+			File.Copy(@"D:\sciter-sdk\bin.osx\sciter-osx-64.dylib", INIT_CWD + @"CPP-Multi\sciter-osx-64.dylib", true);
+		
 			var dirs_cpp = Directory.EnumerateDirectories(INIT_CWD).Where(dir => dir.Contains("CPP-"));
 			foreach(var dir_path in dirs_cpp)
 			{

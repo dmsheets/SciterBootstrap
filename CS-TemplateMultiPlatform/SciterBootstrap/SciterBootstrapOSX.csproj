@@ -54,12 +54,12 @@
     </CustomCommands>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="SciterSharpOSX, Version=2.0.37.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SciterSharpOSX.2.0.37\lib\Xamarin.Mac20\SciterSharpOSX.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.Mac" />
-    <Reference Include="SciterSharpOSX">
-      <HintPath>..\packages\SciterSharpOSX.2.0.27\lib\Xamarin.Mac20\SciterSharpOSX.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
