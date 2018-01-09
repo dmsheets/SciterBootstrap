@@ -42,8 +42,9 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="SciterSharpWindows">
-      <HintPath>..\packages\SciterSharpWindows.2.0.23\lib\net45\SciterSharpWindows.dll</HintPath>
+    <Reference Include="SciterSharpWindows, Version=2.0.37.0, Culture=neutral, PublicKeyToken=917100d643775a9e">
+      <HintPath>..\packages\SciterSharpWindows.2.0.37\lib\net45\SciterSharpWindows.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

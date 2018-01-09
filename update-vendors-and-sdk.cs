@@ -13,7 +13,7 @@ class Script
 		if(true)
 		{
 			// Update C# project (Nuget, dll)
-			File.Copy(@"D:\sciter-sdk\bin.osx\sciter-osx-64.dylib", INIT_CWD + @"CS-TemplateMultiPlatform\SciterBootstrap\sciter-osx-64.dylib", true);
+			File.Copy(@"D:\sciter-sdk\bin.osx\sciter-osx-64.dylib", INIT_CWD + @"CS-TemplateMultiPlatform\SciterBootstrap\libsciter-osx-64.dylib", true);
 
 			var dirs_csharp = Directory.EnumerateDirectories(INIT_CWD).Where(dir => dir.Contains("CS-"));
 			foreach(var dir_path in dirs_csharp)
