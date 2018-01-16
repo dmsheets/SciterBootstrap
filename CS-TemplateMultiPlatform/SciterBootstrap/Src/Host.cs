@@ -1,6 +1,4 @@
-﻿using SciterSharp;
-using SciterSharp.Interop;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -8,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
 using System.IO;
+using SciterSharp;
+using SciterSharp.Interop;
 
 namespace SciterBootstrap
 {
@@ -39,7 +39,7 @@ namespace SciterBootstrap
 			return true;
 		}
 
-		// (Hint: to overload C# methods of SciterEventHandler base class, type 'override', press space, and VS/Xamarin will suggest the methods you can override)
+		// (Hint: to overload C# methods of SciterEventHandler base class, type 'override', press space, and Visual Studio will suggest the methods you can override)
 	}
 
 	// This base class overrides OnLoadData and does the resource loading strategy
