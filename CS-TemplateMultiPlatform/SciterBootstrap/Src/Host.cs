@@ -50,14 +50,28 @@ namespace SciterBootstrap
 	class BaseHost : SciterHost
 	{
 		protected static SciterX.ISciterAPI _api = SciterX.API;
-		protected SciterArchive _archive = new SciterArchive();
+		protected static SciterArchive _archive = new SciterArchive();
 		protected SciterWindow _wnd;
+		private static string _rescwd;
 
-		public BaseHost()
+		static BaseHost()
 		{
-		#if !DEBUG
+#if !DEBUG
 			_archive.Open(SciterAppResource.ArchiveResource.resources);
-		#endif
+#endif
+
+
+#if DEBUG
+			_rescwd = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location).Replace('\\', '/');
+	#if OSX
+			_rescwd += "/../../../../../res/";
+	#else
+			_rescwd += "/../../res/";
+	#endif
+
+			_rescwd = Path.GetFullPath(_rescwd).Replace('\\', '/');
+			Debug.Assert(Directory.Exists(_rescwd));
+#endif
 		}
 
 		public void Setup(SciterWindow wnd)
@@ -68,22 +82,14 @@ namespace SciterBootstrap
 
 		public void SetupPage(string page_from_res_folder)
 		{
-		#if DEBUG
-			string cwd = Path.GetDirectoryName( Assembly.GetExecutingAssembly().Location ).Replace('\\', '/');
-
-			#if OSX
-			Environment.CurrentDirectory = cwd + "/../../../../..";
-			#else
-			Environment.CurrentDirectory = cwd + "/../..";
-			#endif
-
-			string path = Environment.CurrentDirectory + "/res/" + page_from_res_folder;
+			string path = _rescwd + page_from_res_folder;
 			Debug.Assert(File.Exists(path));
 
+#if DEBUG
 			string url = "file://" + path;
-		#else
+#else
 			string url = "archive://app/" + page_from_res_folder;
-		#endif
+#endif
 
 			bool res = _wnd.LoadPage(url);
 			Debug.Assert(res);
