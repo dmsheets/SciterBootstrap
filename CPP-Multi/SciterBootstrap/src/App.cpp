@@ -20,6 +20,8 @@ namespace App
 
 	void Init()
 	{
+		::SciterSetOption(NULL, SCITER_SET_DEBUG_MODE, TRUE);
+
 		AppWindow = new Window();
 		AppHost = new Host(*AppWindow);
 

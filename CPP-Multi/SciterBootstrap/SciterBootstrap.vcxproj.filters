@@ -22,6 +22,9 @@
     <Filter Include="res">
       <UniqueIdentifier>{b734d400-7541-49d0-85dc-2963e9907a90}</UniqueIdentifier>
     </Filter>
+    <Filter Include="res\LibConsole">
+      <UniqueIdentifier>{c96b226f-4a17-48ac-8a5a-64ba699df6df}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Image Include="rc\small.ico">
@@ -111,6 +114,21 @@
       <Filter>res</Filter>
     </None>
     <None Include="..\sciter.dll" />
+    <None Include="res\LibConsole\tracewnd.html">
+      <Filter>res\LibConsole</Filter>
+    </None>
+    <None Include="res\LibConsole\unittest.html">
+      <Filter>res\LibConsole</Filter>
+    </None>
+    <None Include="res\LibConsole\utils.tis">
+      <Filter>res\LibConsole</Filter>
+    </None>
+    <None Include="res\LibConsole\console.tis">
+      <Filter>res\LibConsole</Filter>
+    </None>
+    <None Include="res\LibConsole\debug-peer.tis">
+      <Filter>res\LibConsole</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Text Include="src\SciterSharpCPP\README.txt">

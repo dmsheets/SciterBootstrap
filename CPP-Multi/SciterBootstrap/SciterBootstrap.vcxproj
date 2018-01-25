@@ -195,6 +195,11 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="res\index.html" />
+    <None Include="res\LibConsole\console.tis" />
+    <None Include="res\LibConsole\debug-peer.tis" />
+    <None Include="res\LibConsole\tracewnd.html" />
+    <None Include="res\LibConsole\unittest.html" />
+    <None Include="res\LibConsole\utils.tis" />
     <None Include="src\App.mm" />
     <None Include="src\ProgramOSX.mm" />
     <None Include="src\SciterSharpCPP\SciterWindow.mm" />
