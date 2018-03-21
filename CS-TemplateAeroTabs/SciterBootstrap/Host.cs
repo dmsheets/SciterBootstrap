@@ -34,7 +34,7 @@ namespace SciterBootstrap
 	}
 
 	// This base class overrides OnLoadData and does the resource loading strategy
-	// explained at http://misoftware.rs/Bootstrap/Dev
+	// explained at http://misoftware.com.br/Bootstrap/Dev
 	//
 	// - in DEBUG mode: resources loaded directly from the file system
 	// - in RELEASE mode: resources loaded from by a SciterArchive (packed binary data contained as C# code in ArchiveResource.cs)
