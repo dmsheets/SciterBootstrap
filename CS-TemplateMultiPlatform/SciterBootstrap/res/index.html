@@ -1,3 +1,4 @@
+<!-- OmniView:on -->
 <html>
 <head>
 	<style>
@@ -17,6 +18,16 @@
 			Sciter.launch(this.@#href);
             return true;
 		});
+
+		$(time).text = new Date().toString();
+
+		self.on("keydown", function(evt) {
+			if(evt.keyCode == Event.VK_F5)
+			{
+				view.load(self.url());
+				return true;
+			}
+		});
 	</script>
 </head>
 
@@ -25,7 +36,14 @@
 	<h1 />
 	<h2 />
 
-	If you are new to C# Sciter, read our introductory article:
-	<a href="http://www.codeproject.com/Articles/1057199/Sciter-HTML-Csharp-based-desktop-apps-walkthrough">Walk-through for writing apps with SciterSharp</a>
+	<p>
+		If you are new to C# Sciter, read our introductory article:
+		<a href="http://www.codeproject.com/Articles/1057199/Sciter-HTML-Csharp-based-desktop-apps-walkthrough">Walk-through for writing apps with SciterSharp</a>
+	</p>
+
+	<p>
+		Page loaded at <time/> -- Press <b>F5</b> to reload this page.<br />
+		In <b>DEBUG</b> mode this is useful so you don't need to recompile the whole app for seeing changes in your HTML.
+	</p>
 </body>
 </html>
