@@ -34,7 +34,7 @@ public:
 				::SciterDataReady(_wnd.GetHWND(), pnmld->uri, data.start, data.length);
 		}
 
-#if true
+#if false
 		// LibConsole handling
 		else if (wu.like(WSTR("sciter:debug-peer.tis")) ||
 			wu.like(WSTR("sciter:console.tis")) ||

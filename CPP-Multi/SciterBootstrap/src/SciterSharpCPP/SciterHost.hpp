@@ -35,7 +35,9 @@ protected:
 	virtual LRESULT OnLoadData(LPSCN_LOAD_DATA sld) { return LOAD_OK; }
 	
 public:
-	HWINDOW get_hwnd() { return _wnd.GetHWND(); }
+	// sciter::host traits
+	HWINDOW get_hwnd() const { return _wnd.GetHWND(); }
+	HINSTANCE get_resource_instance() const { return ::GetModuleHandle(NULL); }
 	
 	LRESULT on_load_data(LPSCN_LOAD_DATA pnmld)
 	{
