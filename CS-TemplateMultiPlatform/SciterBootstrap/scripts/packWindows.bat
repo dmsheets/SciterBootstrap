@@ -2,6 +2,6 @@
 
 if "%1"=="Debug" exit
 
-echo ######## Packing '/res' directory to 'ArchiveResource.cs' ########
+echo ######## Packing '/res' directory to '/Src/ArchiveResource.cs' ########
 cd %~dp0
-packfolder.exe ../res ../ArchiveResource.cs -csharp -x "*IconBundler*;*sciter.dll"
+packfolder.exe ../res ../Src/ArchiveResource.cs -csharp -x "*IconBundler*;*sciter.dll"
