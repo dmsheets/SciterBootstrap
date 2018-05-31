@@ -49,18 +49,12 @@ namespace SciterBootstrap
 	// - in RELEASE mode: resources loaded from by a SciterArchive (packed binary data contained as C# code in ArchiveResource.cs)
 	class BaseHost : SciterHost
 	{
-		protected static SciterX.ISciterAPI _api = SciterX.API;
 		protected static SciterArchive _archive = new SciterArchive();
 		protected SciterWindow _wnd;
 		private static string _rescwd;
 
 		static BaseHost()
 		{
-#if !DEBUG
-			_archive.Open(SciterAppResource.ArchiveResource.resources);
-#endif
-
-
 #if DEBUG
 			_rescwd = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location).Replace('\\', '/');
 	#if OSX
@@ -71,6 +65,8 @@ namespace SciterBootstrap
 
 			_rescwd = Path.GetFullPath(_rescwd).Replace('\\', '/');
 			Debug.Assert(Directory.Exists(_rescwd));
+#else
+			_archive.Open(SciterAppResource.ArchiveResource.resources);
 #endif
 		}
 
@@ -103,7 +99,7 @@ namespace SciterBootstrap
 				string path = sld.uri.Substring(14);
 				byte[] data = _archive.Get(path);
 				if(data!=null)
-					_api.SciterDataReady(sld.hwnd, sld.uri, data, (uint) data.Length);
+					SciterX.API.SciterDataReady(sld.hwnd, sld.uri, data, (uint) data.Length);
 			}
 
 			// call base to ensure LibConsole is loaded
