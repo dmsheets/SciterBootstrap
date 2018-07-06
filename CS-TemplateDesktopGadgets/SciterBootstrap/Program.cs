@@ -29,7 +29,6 @@ namespace SciterBootstrap
 				SciterXDef.SCITER_CREATE_WINDOW_FLAGS.SW_MAIN |
 				SciterXDef.SCITER_CREATE_WINDOW_FLAGS.SW_ALPHA |
 				SciterXDef.SCITER_CREATE_WINDOW_FLAGS.SW_POPUP |
-				SciterXDef.SCITER_CREATE_WINDOW_FLAGS.SW_TOOL |
 				SciterXDef.SCITER_CREATE_WINDOW_FLAGS.SW_ENABLE_DEBUG);
 			wnd.CenterTopLevelWindow();
 			wnd.HideTaskbarIcon();

@@ -25,6 +25,7 @@
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>
     </DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -42,8 +43,8 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="SciterSharpWindows, Version=2.0.61.0, Culture=neutral, PublicKeyToken=917100d643775a9e">
-      <HintPath>..\packages\SciterSharpWindows.2.0.61\lib\net45\SciterSharpWindows.dll</HintPath>
+    <Reference Include="SciterSharpWindows, Version=2.0.67.0, Culture=neutral, PublicKeyToken=917100d643775a9e">
+      <HintPath>..\packages\SciterSharpWindows.2.0.67\lib\net45\SciterSharpWindows.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />

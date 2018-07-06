@@ -12,7 +12,7 @@ namespace SciterBootstrap
 	{
 		protected override void OnOutput(SciterSharp.Interop.SciterXDef.OUTPUT_SUBSYTEM subsystem, SciterSharp.Interop.SciterXDef.OUTPUT_SEVERITY severity, string text)
 		{
-			Console.WriteLine(text);// so I can see Debug output even if 'native debugging' is off
+			Console.WriteLine(text);// prints to console Sciter's debug output (works even if 'native debugging' is off)
 		}
 	}
 
