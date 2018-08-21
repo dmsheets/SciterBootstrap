@@ -224,7 +224,26 @@ typedef BOOL SC_CALLBACK SciterBehaviorFactory( LPCSTR, HELEMENT, LPElementEvent
       SCROLL_SLIDER_RELEASED,
       SCROLL_CORNER_PRESSED,
       SCROLL_CORNER_RELEASED,
+      SCROLL_SLIDER_PRESSED,
   };
+
+  enum SCROLL_SOURCE {
+    SCROLL_SOURCE_UNKNOWN,
+    SCROLL_SOURCE_KEYBOARD,  // SCROLL_PARAMS::reason <- keyCode
+    SCROLL_SOURCE_SCROLLBAR, // SCROLL_PARAMS::reason <- SCROLLBAR_PART 
+    SCROLL_SOURCE_ANIMATOR,
+  };
+
+  enum SCROLLBAR_PART {
+    SCROLLBAR_BASE,       
+    SCROLLBAR_PLUS,       
+    SCROLLBAR_MINUS,      
+    SCROLLBAR_SLIDER,     
+    SCROLLBAR_PAGE_MINUS, 
+    SCROLLBAR_PAGE_PLUS,  
+    SCROLLBAR_CORNER,     
+  };
+
 
   struct SCROLL_PARAMS
   {
@@ -232,6 +251,8 @@ typedef BOOL SC_CALLBACK SciterBehaviorFactory( LPCSTR, HELEMENT, LPElementEvent
       HELEMENT  target;       // target element
       INT       pos;          // scroll position if SCROLL_POS
       BOOL      vertical;     // true if from vertical scrollbar
+      UINT      source;       // SCROLL_SOURCE
+      UINT      reason;       // key or scrollbar part
   };
 
   enum GESTURE_CMD
@@ -708,7 +729,7 @@ typedef BOOL SC_CALLBACK SciterBehaviorFactory( LPCSTR, HELEMENT, LPElementEvent
       {
         event_handler* pThis = static_cast<event_handler*>(tag);
         if( pThis ) switch( evtg )
-          {
+        {
             case SUBSCRIPTIONS_REQUEST:
               {
                 UINT *p = (UINT *)prms; 
@@ -738,9 +759,9 @@ typedef BOOL SC_CALLBACK SciterBehaviorFactory( LPCSTR, HELEMENT, LPElementEvent
             // call using tiscript::value's (from the script)
             case HANDLE_TISCRIPT_METHOD_CALL: { TISCRIPT_METHOD_PARAMS* p = (TISCRIPT_METHOD_PARAMS *)prms; return pThis->handle_scripting_call(he, *p ); }
 			      case HANDLE_GESTURE :  { GESTURE_PARAMS *p = (GESTURE_PARAMS *)prms; return pThis->handle_gesture(he, *p ); }
-			default:
+			      default:
               assert(false);
-          }
+        }
         return false;
       }
     };
